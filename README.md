@@ -2,7 +2,7 @@
 ## Firmware
 After having [installed](https://www.polidea.com/blog/PIXIE_-_continuous_integration_status_light-4/) our beautiful PIXIE, you want to have it up and running! First thing you have to do is to setup your Particle device. In order to do that you should follow the instructions available on [Particle website]. When the device is connected to the network you can install our firmware. Here is a list of steps that have to be done:
 
-1. Download the firmware from [our github](https://github.com/Polidea/PIXIE)
+1. Download the [firmware](https://github.com/Polidea/PIXIE/blob/master/firmware.bin)
 2. Put your device into [listening mode]
 3. Run [particle setup] command from command line and remember the name that you've given to your device
 4. Log in to [Particle build site] using credentials defined in previous step and copy the *AccessToken*<br>
