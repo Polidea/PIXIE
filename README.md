@@ -31,6 +31,9 @@ Where:
 
 Note: *YOUR_URL* **can not be longer than 63 characters!**
 
+###License
+**PIXIE** is released under a MIT License. See LICENSE file for details.
+
 [Particle website]: https://docs.particle.io/guide/getting-started/connect/photon/
 [listening mode]: https://docs.particle.io/guide/getting-started/modes/photon/#listening-mode
 [particle setup]: https://docs.particle.io/guide/tools-and-features/cli/photon/#particle-setup
