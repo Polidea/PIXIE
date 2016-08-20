@@ -13,6 +13,7 @@ class Visualiser {
             delete image;
         }
         void setStatus(BuildStatus status);
+        BuildStatus getStatus() const;
         void animate();
     private:
     

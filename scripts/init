@@ -1,0 +1,4 @@
+#!/bin/bash
+
+./scripts/setup BestBuddies 3 8a7eedaf3e02e006556ab93d9b6353a076c90598 http://gitlab-ci.local.polidea.com/dot/149
+./scripts/setup BestBuddies 4 8a7eedaf3e02e006556ab93d9b6353a076c90598 http://gitlab-ci.local.polidea.com/dot/148

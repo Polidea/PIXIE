@@ -1,0 +1,10 @@
+#!/bin/bash
+
+NAME=$1
+PORT=$2
+TOKEN=$3
+URL=$4
+
+curl "https://api.particle.io/v1/devices/$NAME/setPort${PORT}Url" \
+    -d access_token=$TOKEN  \
+    -d "args=$URL"

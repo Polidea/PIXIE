@@ -25,13 +25,13 @@ class BuildStatus {
         float getProgress() const;
         bool isFound() const;
         bool operator==(BuildStatus& rhs)const;
+        static build::ExecutionResult parseResultString(String string);
     private:
         build::ExecutionResult currentResult_;    
         build::ExecutionResult previousResult_;
         unsigned long timestamp_;
         unsigned long elapsedTime_;
         unsigned long executionEstimate_;
-        static build::ExecutionResult parseResultString(String string);
 };
 
 #endif

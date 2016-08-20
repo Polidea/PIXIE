@@ -45,6 +45,11 @@ void Visualiser::setStatus(BuildStatus status) {
     Serial.println(buildStatus_.getCurrentResult());
 }
 
+BuildStatus Visualiser::getStatus() const {
+    return buildStatus_;
+}
+
 void Visualiser::animate() {
     image->draw();
 }
+
