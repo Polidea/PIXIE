@@ -92,12 +92,32 @@ void updateConfig(){
             delete visualisers[D3];
             visualisers.erase(D3);
         }
+        if(visualisers.count(D4) != 0) {
+            delete visualisers[D4];
+            visualisers.erase(D4);
+        }
+        if(visualisers.count(D5) != 0) {
+            delete visualisers[D5];
+            visualisers.erase(D5);
+        }
+        if(visualisers.count(D6) != 0) {
+            delete visualisers[D6];
+            visualisers.erase(D6);
+        }
+        if(visualisers.count(D7) != 0) {
+            delete visualisers[D7];
+            visualisers.erase(D7);
+        }
 
         //adding
         visualisers[D0] = new Visualiser(D0, NUMBER_OF_LEDS);
         visualisers[D1] = new Visualiser(D1, NUMBER_OF_LEDS);
         visualisers[D2] = new Visualiser(D2, NUMBER_OF_LEDS);
         visualisers[D3] = new Visualiser(D3, NUMBER_OF_LEDS);
+        visualisers[D4] = new Visualiser(D4, NUMBER_OF_LEDS);
+        visualisers[D5] = new Visualiser(D5, NUMBER_OF_LEDS);
+        visualisers[D6] = new Visualiser(D6, NUMBER_OF_LEDS);
+        visualisers[D7] = new Visualiser(D7, NUMBER_OF_LEDS);
         shouldUpdate = false;
     }
 }
@@ -123,6 +143,7 @@ void setup() {
     updateConfig();
     Serial.println("setup done");
 
+
     int i=0;
     stats[i++] = new BuildStatus(build::FAILED, build::SUCCESS, 0, 0);
     stats[i++] = new BuildStatus(build::FAILED, build::SUCCESS, 0, 0);
@@ -135,6 +156,17 @@ void setup() {
     stats[i++] = new BuildStatus(build::SUCCESS, build::RUNNING, 0, 0);
     stats[i++] = new BuildStatus(build::SUCCESS, build::RUNNING, 0, 0);
     stats[i++] = new BuildStatus(build::SUCCESS, build::RUNNING, 0, 0);
+    
+    delay(3000);
+
+    statusPort1("running");
+    statusPort2("running");
+    statusPort3("running");
+    statusPort4("running");
+    statusPort5("running");
+    statusPort6("running");
+    statusPort7("running");
+    statusPort8("running");
 }
 
 void animateVisualisers() {
@@ -149,6 +181,18 @@ void animateVisualisers() {
     }
     if(visualisers.count(D3) != 0) {
         visualisers[D3]->animate();
+    }
+    if(visualisers.count(D4) != 0) {
+        visualisers[D4]->animate();
+    }
+    if(visualisers.count(D5) != 0) {
+        visualisers[D5]->animate();
+    }
+    if(visualisers.count(D6) != 0) {
+        visualisers[D6]->animate();
+    }
+    if(visualisers.count(D7) != 0) {
+        visualisers[D7]->animate();
     }
 }
 
