@@ -40,6 +40,26 @@ int statusPort4(String status) {
     return 0;
 }
 
+int statusPort5(String status) {
+    setPortStatus(D4, status);
+    return 0;
+}
+
+int statusPort6(String status) {
+    setPortStatus(D5, status);
+    return 0;
+}
+
+int statusPort7(String status) {
+    setPortStatus(D6, status);
+    return 0;
+}
+
+int statusPort8(String status) {
+    setPortStatus(D7, status);
+    return 0;
+}
+
 void runPeriodically(void (*function)(), unsigned long period, unsigned long* lastCalled){
     if (millis() - *lastCalled > period){
         *lastCalled = millis();
@@ -91,6 +111,10 @@ void setup() {
     Particle.function("statusPort2", statusPort2);
     Particle.function("statusPort3", statusPort3);
     Particle.function("statusPort4", statusPort4);
+    Particle.function("statusPort5", statusPort5);
+    Particle.function("statusPort6", statusPort6);
+    Particle.function("statusPort7", statusPort7);
+    Particle.function("statusPort8", statusPort8);
 
     Serial.begin(9600);
     //while(!Serial.available());
